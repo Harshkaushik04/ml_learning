@@ -1,3 +1,4 @@
+import random
 import numpy as np
 import pandas as pd
 pd.set_option('display.max_columns',None) #command for displaying all columns
@@ -7,6 +8,15 @@ print(df.info()) #found that CC Number is int
 def last_four(num):
     return str(num)[-4:]
 print(df['CC Number'].apply(last_four)) #not calling function by ourself, pandas is doinging it for us
+print("wow:")
+ok=int(input("Enter a number:"))
+number=0
+for i in range(ok):
+    x=str(random.randint(1000,9999))
+    wow=df[df['CC Number'].apply(last_four)==x]
+    if len(wow)>0:
+        number+=1
+print(number/ok*100)
 print(df.describe())
 print(df['total_bill'].mean())
 def finding_price_tag(num):

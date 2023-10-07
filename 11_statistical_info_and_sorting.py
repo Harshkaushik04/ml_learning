@@ -25,4 +25,21 @@ print(df)
 my_map={'Female':'F','Male':'M'}
 df['sex']=df['sex'].map(my_map)
 print(df)
-
+print(df.duplicated().value_counts()) #checking whether there is any duplicated row
+df=df._append(df.iloc[0])
+print(df)
+print(df.duplicated().value_counts()) # 1 duplicate
+df=df.drop_duplicates() #dropping duplicates
+print(df)
+between_10_and_20_=df[df['total_bill'].between(10,20,inclusive='both')]
+print(between_10_and_20_)
+#example testing
+df=pd.read_csv('/home/harsh/ml_zip_files_unzipped/03-Pandas/tips.csv')
+new=df[(df["total_bill"]>=40)]
+print(new['CC Number'])
+print(df.nlargest(2,'tip'))#first sort in descending and give first 2
+#alternate:
+#df=df.sort_values('tip',ascending=False)
+#print(df.head(2))
+print(df.sample(5))#sample of 5 rows from df
+print(df.sample(frac=0.1))#sample of 10 percent rows in df
