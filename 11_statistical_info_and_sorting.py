@@ -41,5 +41,5 @@ print(df.nlargest(2,'tip'))#first sort in descending and give first 2
 #alternate:
 #df=df.sort_values('tip',ascending=False)
 #print(df.head(2))
-print(df.sample(5))#sample of 5 rows from df
+print(df.sample(5))#sample of 5 rows fro\\m df
 print(df.sample(frac=0.1))#sample of 10 percent rows in df
