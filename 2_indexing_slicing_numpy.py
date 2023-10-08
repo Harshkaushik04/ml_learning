@@ -30,7 +30,7 @@ print(arr_2d[1][3])#method 1 for indexing
 print(arr_2d[1,3])#method 2 for indexing
 print(arr_2d[:2,1:])#arr_2d[:2,1:]=arr_2d[:2][1:]
 print(arr)
-print(arr>4)
+print(arr_2d>4)
 #conditional selection
 print(arr[arr>4]) #alternatively we can do bool_arr=arr>4 and write that instead of this
 
