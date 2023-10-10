@@ -1,5 +1,4 @@
 import numpy as np
-import random
 my_list=[1,2,3]
 print(type(my_list))
 my_array=np.array(my_list)
