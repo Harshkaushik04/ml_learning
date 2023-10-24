@@ -45,7 +45,7 @@ predictions=my_model.predict(X_test)
 #3. root mean squared error
 from sklearn.metrics import mean_absolute_error,mean_squared_error
 performance_mean_absolute=mean_absolute_error(y_test,predictions)
-performance_mean_squared=mean_squa red_error(y_test,predictions)
+performance_mean_squared=mean_squared_error(y_test,predictions)
 root_mean_squared=performance_mean_squared**(1/2)
 print(performance_mean_absolute)
 print(root_mean_squared)
